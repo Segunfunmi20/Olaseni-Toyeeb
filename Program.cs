@@ -1,22 +1,23 @@
-﻿using System; 
-class Solution{
-    static void Main(String[]args){
-        int i = 4; 
-        double d = 4.0; 
-        string s = "PolyIlaro "; 
-        int num1;
-        double num2; 
-        string text; 
-        Console.WriteLine("Enter an integer value"); 
-        num1 = int.Parse(Console.ReadLine()); 
-        Console.WriteLine("Enter a double value"); 
-        num2 = double.Parse(Console.ReadLine()); 
-        Console.WriteLine("Enter the text: "); 
-        text = Console.ReadLine();
+﻿using System;
+class Question1
+{
+    public static void Main()
+    {
+          Console.WriteLine("Enter three numbers:");
 
-        Console.WriteLine(num1 + i);
-        Console.WriteLine(num2 + d); 
-        Console.WriteLine(s + text);
+        Console.Write("Enter the first number: ");
+        int number1 = Convert.ToInt32(Console.ReadLine());
 
+        Console.Write("Enter the second number: ");
+        int number2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter the third number: ");
+        int number3 = Convert.ToInt32(Console.ReadLine());
+
+        int[] numbers = { number1, number2, number3 };
+        Array.Sort(numbers);
+
+        Console.WriteLine("Numbers in ascending order: {1}, {2}, {3}",numbers[0], numbers[1], numbers[2]);
+        
     }
 }
